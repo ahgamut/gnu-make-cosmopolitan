@@ -107,7 +107,7 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
-bin_PROGRAMS = make$(EXEEXT)
+bin_PROGRAMS = make$(EXEEXT) make.com
 @WINDOWSENV_TRUE@am__append_1 = $(w32_SRCS)
 @WINDOWSENV_TRUE@am__append_2 = -I $(top_srcdir)/src/w32/include
 @WINDOWSENV_FALSE@am__append_3 = src/posixos.c
@@ -423,7 +423,7 @@ ENOLINK_VALUE = @ENOLINK_VALUE@
 EOVERFLOW_HIDDEN = @EOVERFLOW_HIDDEN@
 EOVERFLOW_VALUE = @EOVERFLOW_VALUE@
 ERRNO_H = @ERRNO_H@
-EXEEXT = @EXEEXT@
+EXEEXT = .com.dbg
 GETLOADAVG_LIBS = @GETLOADAVG_LIBS@
 GETTEXT_MACRO_VERSION = @GETTEXT_MACRO_VERSION@
 GMSGFMT = @GMSGFMT@
@@ -1287,6 +1287,9 @@ src/vmsfunctions.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
 src/vmsify.$(OBJEXT): src/$(am__dirstamp) \
 	src/$(DEPDIR)/$(am__dirstamp)
+
+make.com: make$(EXEEXT)
+	objcopy -SO binary $< $@
 
 make$(EXEEXT): $(make_OBJECTS) $(make_DEPENDENCIES) $(EXTRA_make_DEPENDENCIES) 
 	@rm -f make$(EXEEXT)

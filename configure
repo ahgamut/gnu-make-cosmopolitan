@@ -2416,12 +2416,6 @@ else
 /* end confdefs.h.  */
 /* Define $2 to an innocuous variant, in case <limits.h> declares $2.
    For example, HP-UX 11i <limits.h> declares gettimeofday.  */
-#define $2 innocuous_$2
-
-/* System header to define __stub macros and hopefully few prototypes,
-    which can conflict with char $2 (); below.
-    Prefer <limits.h> to <assert.h> if __STDC__ is defined, since
-    <limits.h> exists even on freestanding compilers.  */
 
 #ifdef __STDC__
 # include <limits.h>
@@ -2429,27 +2423,10 @@ else
 # include <assert.h>
 #endif
 
-#undef $2
-
-/* Override any GCC internal prototype to avoid an error.
-   Use char because int might match the return type of a GCC
-   builtin and then its argument prototype would still apply.  */
-#ifdef __cplusplus
-extern "C"
-#endif
-char $2 ();
-/* The GNU C library defines this for functions which it implements
-    to always fail with ENOSYS.  Some functions are actually named
-    something starting with __ and the normal name is an alias.  */
-#if defined __stub_$2 || defined __stub___$2
-choke me
-#endif
-
 int
 main ()
 {
-return $2 ();
-  ;
+void *f = (void*) $2;
   return 0;
 }
 _ACEOF
