@@ -1,6 +1,8 @@
 #
 make.com
 make.com.dbg
+libcosmo/*
+!libcosmo/README.md
 
 # Prerequisites
 *.d
