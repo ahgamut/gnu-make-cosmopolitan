@@ -4,11 +4,43 @@ make.com.dbg
 libcosmo/*
 !libcosmo/README.md
 
+# Build artifacts from superconfigure
+Makefile
+doc/Makefile
+build.cfg
+config.log
+config.status
+lib/alloca.h
+lib/fcntl.h
+lib/limits.h
+lib/stdbool.h
+lib/stddef.h
+lib/stdint.h
+lib/stdio.h
+lib/stdlib.h
+lib/string.h
+lib/sys/types.h
+lib/unistd.h
+po/Makefile
+po/Makefile.in
+po/POTFILES
+src/config.h
+src/stamp-h1
+tests/config-flags.pm
+tests/testapi.c
+tests/testload.c
+tests/work/
+
+# directory stamp
+.dirstamp
+
 # Prerequisites
 *.d
 
 # Object files
 *.o
+*.Po
+*.Tpo
 *.ko
 *.obj
 *.elf

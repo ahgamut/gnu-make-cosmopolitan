@@ -1054,6 +1054,7 @@ int
 main (int argc, char **argv, char **envp)
 #endif
 {
+  showcrashreports();
   static char *stdin_nm = 0;
   int makefile_status = MAKE_SUCCESS;
   struct goaldep *read_files;

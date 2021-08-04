@@ -17,6 +17,7 @@ LD_LIBRARY_PATH="" ./configure \
     --without-libiconv-prefix \
     --without-libintl-prefix \
     --disable-posix-spawn \
+    --without-guile \
     CFLAGS="-O0 -g3 -Wall -Wno-strict-prototypes -Wno-unused-value \
       -std=c99 -static \
       -fno-pie -fno-omit-frame-pointer \
